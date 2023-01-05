@@ -1,14 +1,16 @@
 package main
- var a = "G"
+ var a string
  func main() {
- n()//PRINTS G
- m()//PRINTS O
- n()//PRINTS O
+ a = "G"
+ print(a)//PRINTS G
+ f1()//PRINTS O
  }
- func n() {
+
+ func f1() {
+ a := "O"
  print(a)
+ f2()//PRINTS G
  }
- func m() {
- a = "O"
+ func f2() {
  print(a)
  }
