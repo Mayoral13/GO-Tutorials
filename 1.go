@@ -1,16 +1,20 @@
-package main
- var a string
- func main() {
- a = "G"
- print(a)//PRINTS G
- f1()//PRINTS O
- }
+/*
+Create a program that counts the number of bytes and characters (runes) for this string:
+ “asSASA ddd dsjkdsjs dk”
+Then do the same for this string: “asSASA ddd dsjkdsjsこん dk”
+Explain the difference. (hint: use the unicode/utf8 package.)
 
- func f1() {
- a := "O"
- print(a)
- f2()//PRINTS G
- }
- func f2() {
- print(a)
- }
+*/
+package main
+import(
+	"fmt"
+	"unicode/utf8"
+)
+func main(){
+	a := "asSASA ddd dsjkdsjs dk";
+	b:= "asSASA ddd dsjkdsjsこん dk"
+	fmt.Println("Bytes in A is:",len(a))
+	fmt.Println("Bytes in B is:",len(b))
+	fmt.Println("Runes in A is:",utf8.RuneCountInString(a))
+	fmt.Println("Runes in B is:",utf8.RuneCountInString(b))
+}
