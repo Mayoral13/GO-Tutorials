@@ -1,20 +1,17 @@
-/*
-Create a program that counts the number of bytes and characters (runes) for this string:
- “asSASA ddd dsjkdsjs dk”
-Then do the same for this string: “asSASA ddd dsjkdsjsこん dk”
-Explain the difference. (hint: use the unicode/utf8 package.)
-
-*/
 package main
-import(
-	"fmt"
-	"unicode/utf8"
-)
+import("fmt";
+"runtime")
+var prompt = "Enter a digit, e.g. 3 "+ "or %s to quit."
 func main(){
-	a := "asSASA ddd dsjkdsjs dk";
-	b:= "asSASA ddd dsjkdsjsこん dk"
-	fmt.Println("Bytes in A is:",len(a))
-	fmt.Println("Bytes in B is:",len(b))
-	fmt.Println("Runes in A is:",utf8.RuneCountInString(a))
-	fmt.Println("Runes in B is:",utf8.RuneCountInString(b))
+if(runtime.GOOS == "windows"){
+	prompt = fmt.Sprintf(prompt,"Ctrl + Z, Enter");
+	fmt.Print(prompt)
+}else{
+	prompt = fmt.Sprintf(prompt,"Ctrl + D, Enter");
+	fmt.Print(prompt);
+
+}
+
+ 
+
 }
