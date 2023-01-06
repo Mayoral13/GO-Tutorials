@@ -1,18 +1,15 @@
-//Write a function Season which has as input-parameter a month-number and
-//which returns the name of the season to which this month belongs (disregard the day in the month).
-package main
+//Create a simple loop with the for construct. Make it loop 15 times and print out the loop
+//counter with the fmt package.
+
+//Rewrite this loop using goto. The keyword for may not be used now.
+package main 
 import("fmt")
-func Season(a uint){
-switch a {
-case 1:fmt.Printf("Summer\n")
-case 2:fmt.Printf("Winter\n")
-case 3:fmt.Printf("Autumn\n")
-default:fmt.Printf("Just a regular day\n")
-}
+func loop15(){
+for i:= 0; i<15; i++{
+		fmt.Printf("Counter is: %d\n",i)
+	}
+
 }
 func main(){
-Season(1)
-Season(2)
-Season(3)
-Season(4)
+	loop15()
 }
