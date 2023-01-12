@@ -19,6 +19,9 @@ func main(){
 		37,34,83,27,
 		19,97,9,17,
 	   }
+	   //USED len(x)-1 because the comparison stops at the length of the array and since they are both looping
+	   //to the same length one has to be less than the other
+	   //Can decide to use math.Min() //but its for floats
 	   for i:=0; i<len(x)-1; i++{
 		for j:=0; j<len(x); j++{
         if(x[i] < x[j]){
