@@ -1,16 +1,12 @@
-//Write another program that converts from feet
-//into meters. (1 ft = 0.3048 m)
+//Write a program that prints out all the numbers
+//evenly divisible by 3 between 1 and 100. (3, 6, 9	etc.)
 package main
 import "fmt"
-var feet float64;
-var metre float64;
 func main(){
-FT_M();
+	for i:=1; i<=100; i++{
+		if(i%3 == 0){
+			fmt.Printf("%v\n",i)
+		}
+	}
 }
-func FT_M(){
-		fmt.Print("Welcome to feet to metres converter\n")
-	fmt.Print("Enter a value\n")
-	fmt.Scanf("%f\n",&feet);
-	metre = feet * 0.3048;
-	fmt.Printf("Converted value is: %f\n",metre);
-}
+
