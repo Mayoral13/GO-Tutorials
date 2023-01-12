@@ -1,12 +1,33 @@
-//Write a program that prints out all the numbers
-//evenly divisible by 3 between 1 and 100. (3, 6, 9	etc.)
+
+/*
+Write a program that finds the smallest number
+in this list:
+x := []int{
+ 48,96,86,68,
+ 57,82,63,70,
+ 37,34,83,27,
+ 19,97, 9,17,
+}
+*/
 package main
-import "fmt"
+import("fmt")
 func main(){
-	for i:=1; i<=100; i++{
-		if(i%3 == 0){
-			fmt.Printf("%v\n",i)
+	var apple int;
+	x := []int{
+		48,96,86,68,
+		57,82,63,70,
+		37,34,83,27,
+		19,97,9,17,
+	   }
+	   for i:=0; i<len(x)-1; i++{
+		for j:=0; j<len(x); j++{
+        if(x[i] < x[j]){
+			apple = x[i]
+		}else{
+			apple = x[j]
 		}
-	}
+		}
+	   }
+	   fmt.Printf("Smallest is %v\n",apple)
 }
 
