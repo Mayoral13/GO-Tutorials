@@ -1,19 +1,16 @@
-//PROGRAM THAT write a program that converts from Fahrenheit
-//into Celsius. (C = (F - 32) * 5/9)
+//Write another program that converts from feet
+//into meters. (1 ft = 0.3048 m)
 package main
 import "fmt"
-var input float64;
-var temp float64;
+var feet float64;
+var metre float64;
 func main(){
- Converter();
+FT_M();
 }
-func Converter(){
-	fmt.Print("WELCOME TO CELSIUS TEMP CONVERTER\n")
+func FT_M(){
+		fmt.Print("Welcome to feet to metres converter\n")
 	fmt.Print("Enter a value\n")
-	fmt.Scanf("%f",&input)
-	temp = (input-32)*5 / 9
-	fmt.Printf("The inputed value is: %f \n",input)
-	fmt.Print("Converted value is: ",temp)
+	fmt.Scanf("%f\n",&feet);
+	metre = feet * 0.3048;
+	fmt.Printf("Converted value is: %f\n",metre);
 }
-
-
