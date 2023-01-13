@@ -1,24 +1,24 @@
 
 /*
-Write a function which takes an integer and
-halves it and returns true if it was even or false
-if it was odd. For example half(1) should return
-(0, false) and half(2) should return (1,
-true).
+Write a function with one variadic parameter
+that finds the greatest number in a list of numbers.
 */
 package main
 import "fmt"
-func half(a int) (int, bool){
-if(a %2 == 0){
-	b:= a / 2
-	return b,true
-}else{
-	b:= a / 2
-	return b,false;
-}
+func greater(a...int) (int){
+	var k int;
+	for i:=0; i<len(a) -1 ;i++{
+		for j:=0; i<len(a);i++{
+		if(a[i] > a[j]){
+          k = a[i]
+		}else{
+			k = a[j]
+		}
+		}
+	}
+	return k
 }
 func main(){
-	a,b := half(78)
-	fmt.Print("RESULT: ",a,b)
+a := greater(1,2,3,5,7,9,990)
+fmt.Print("The largest number is: ",a)
 }
-
