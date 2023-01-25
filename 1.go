@@ -1,16 +1,19 @@
-/*1. Odd or Even?
-This is about as simple as it comes — this program will take a number input by a user
-and then tell the user if the number is odd or even.*/
+/*
+2. Creating a dice-rolling simulator is a great beginner project to help you learn. In
+the real world, rolling dice allows you to generate a random number ranging from 1
+through 6, so your program should have the same functionality. This project uses the
+random module to generate random numbers and print them to the user.
+*/
 package main
-import("fmt")
-var input int;
-func main(){
-	value,_:=fmt.Scan(&input)
-	if(input % 2 == 0){
-		fmt.Print("NUMBER IS EVEN")
-	}else{
-		fmt.Print("NUMBER IS ODD \n")
-		fmt.Print(value)
 
+import (
+	"fmt"
+	"math/rand"
+)
+func main(){
+Random()
 }
+func Random(){
+value := rand.Intn(6)
+fmt.Print(value)
 }
