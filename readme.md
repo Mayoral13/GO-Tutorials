@@ -1,1 +1,1 @@
-This contains exercise solutions from The Way to GO book
+This contains some mini projects am building as I learn go
